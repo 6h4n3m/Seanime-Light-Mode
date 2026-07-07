@@ -38,6 +38,10 @@ A custom CSS override that brings a full light theme to [Seanime Denshi](https:/
 3. Copy the entire contents of [`seanime-light-theme-override.css`](seanime-light-theme-override.css) and paste it into the Custom CSS text area.
 4. Save settings -- the light theme applies instantly.
 
+## Reporting Issues
+
+If you encounter a bug or visual glitch, please [open an issue](https://github.com/ahmed/Seanime-Light-Mode/issues/new?template=bug_report.md) on GitHub. Include your Seanime version (found in Settings > About) and a screenshot of the problem so it can be resolved quickly.
+
 ## License
 
 [CC0-1.0](LICENSE)
