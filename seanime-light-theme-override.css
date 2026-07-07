@@ -1,0 +1,1031 @@
+/*
+ * Seanime light theme override for the built-in Custom CSS setting.
+ */
+
+:root,
+html.dark,
+.dark,
+[data-mode="dark"] {
+    color-scheme: light !important;
+
+    /* Light-mode neutral ramp from 9e099d95. Low numbers remain text shades,
+       high numbers become light surfaces so existing dark:* gray utilities work. */
+    --color-gray-50: 24 24 27 !important;
+    --color-gray-100: 39 39 42 !important;
+    --color-gray-200: 52 52 56 !important;
+    --color-gray-300: 82 82 91 !important;
+    --color-gray-400: 106 106 114 !important;
+    --color-gray-500: 120 120 128 !important;
+    --color-gray-600: 150 150 158 !important;
+    --color-gray-700: 200 200 206 !important;
+    --color-gray-800: 224 224 228 !important;
+    --color-gray-900: 238 238 241 !important;
+    --color-gray-950: 248 248 250 !important;
+    --color-gray-default: 120 120 128 !important;
+
+    --foreground: rgb(39 39 42) !important;
+    --background: #f7f7f8 !important;
+    --brand: rgb(82 67 203) !important;
+
+    --slate: #475569 !important;
+    --gray: rgb(105 105 110) !important;
+    --zinc: #52525b !important;
+    --neutral: #525252 !important;
+    --stone: #57534e !important;
+    --red: #b91c1c !important;
+    --orange: #c2410c !important;
+    --amber: #b45309 !important;
+    --yellow: #a16207 !important;
+    --lime: #4d7c0f !important;
+    --green: #154f37 !important;
+    --emerald: #047857 !important;
+    --teal: #0f766e !important;
+    --cyan: #0e7490 !important;
+    --sky: #0369a1 !important;
+    --blue: #1d4ed8 !important;
+    --indigo: #4338ca !important;
+    --violet: #6d28d9 !important;
+    --purple: #7e22ce !important;
+    --fuchsia: #a21caf !important;
+    --pink: #be185d !important;
+    --rose: #be123c !important;
+
+    --border: rgba(0, 0, 0, 0.1) !important;
+    --ring: rgb(97 82 223) !important;
+    --muted: rgba(0, 0, 0, 0.68) !important;
+    --muted-highlight: rgba(0, 0, 0, 0.75) !important;
+    --faint: rgba(0, 0, 0, 0.4) !important;
+
+    --paper: #ffffff !important;
+    --paper-elevated: #f1f1f3 !important;
+    --paper-highlighter: #ffffff !important;
+    --subtle: rgba(0, 0, 0, 0.04) !important;
+    --subtle-highlight: rgba(0, 0, 0, 0.06) !important;
+    --scrollbar-thumb: rgba(0, 0, 0, 0.25) !important;
+    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.35) !important;
+    --media-card-popup-background: #ffffff !important;
+    --hover-from-background-color: #ececef !important;
+}
+
+html,
+body,
+#root {
+    background: var(--background) !important;
+    color: var(--foreground) !important;
+}
+
+html * {
+    border-color: var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover) !important;
+}
+
+/* Semantic text replacements for dark-only fixed utility colors touched by
+   9e099d95. These are deliberately color-specific, not image/filter inversion. */
+.text-brand-100,
+.text-brand-200,
+.text-brand-300,
+.text-brand-400,
+.text-brand-500,
+.dark .dark\:text-brand-100,
+.dark .dark\:text-brand-200,
+.dark .dark\:text-brand-300,
+.dark .dark\:text-brand-400,
+.dark .dark\:text-brand-500,
+.dark .dark\:hover\:text-brand-100:hover,
+.dark .dark\:hover\:text-brand-200:hover,
+.dark .dark\:hover\:text-brand-300:hover,
+.dark .dark\:hover\:text-brand-400:hover,
+.hover\:text-brand-100:hover,
+.hover\:text-brand-200:hover,
+.hover\:text-brand-300:hover,
+.hover\:text-brand-400:hover {
+    color: var(--brand) !important;
+}
+
+.text-indigo-200,
+.text-indigo-300,
+.text-indigo-400,
+.text-indigo-500,
+.dark .dark\:text-indigo-200,
+.dark .dark\:text-indigo-300,
+.dark .dark\:text-indigo-400,
+.dark .dark\:text-indigo-500 {
+    color: var(--indigo) !important;
+}
+
+.text-blue-200,
+.text-blue-300,
+.text-blue-400,
+.text-blue-500,
+.dark .dark\:text-blue-200,
+.dark .dark\:text-blue-300,
+.dark .dark\:text-blue-400,
+.dark .dark\:text-blue-500 {
+    color: var(--blue) !important;
+}
+
+.text-red-200,
+.text-red-300,
+.text-red-400,
+.text-red-500,
+.dark .dark\:text-red-200,
+.dark .dark\:text-red-300,
+.dark .dark\:text-red-400,
+.dark .dark\:text-red-500,
+.hover\:text-red-400:hover,
+.dark .dark\:hover\:text-red-400:hover {
+    color: var(--red) !important;
+}
+
+.text-orange-200,
+.text-orange-300,
+.text-orange-400,
+.text-orange-500,
+.dark .dark\:text-orange-200,
+.dark .dark\:text-orange-300,
+.dark .dark\:text-orange-400,
+.dark .dark\:text-orange-500 {
+    color: var(--orange) !important;
+}
+
+.text-amber-200,
+.text-amber-300,
+.text-amber-400,
+.text-amber-500,
+.dark .dark\:text-amber-200,
+.dark .dark\:text-amber-300,
+.dark .dark\:text-amber-400,
+.dark .dark\:text-amber-500 {
+    color: var(--amber) !important;
+}
+
+.text-yellow-50,
+.text-yellow-200,
+.text-yellow-300,
+.text-yellow-400,
+.text-yellow-500,
+.dark .dark\:text-yellow-50,
+.dark .dark\:text-yellow-200,
+.dark .dark\:text-yellow-300,
+.dark .dark\:text-yellow-400,
+.dark .dark\:text-yellow-500 {
+    color: var(--yellow) !important;
+}
+
+.text-green-200,
+.text-green-300,
+.text-green-400,
+.text-green-500,
+.dark .dark\:text-green-200,
+.dark .dark\:text-green-300,
+.dark .dark\:text-green-400,
+.dark .dark\:text-green-500 {
+    color: var(--green) !important;
+}
+
+.text-cyan-200,
+.text-cyan-300,
+.text-cyan-400,
+.text-cyan-500,
+.dark .dark\:text-cyan-200,
+.dark .dark\:text-cyan-300,
+.dark .dark\:text-cyan-400,
+.dark .dark\:text-cyan-500 {
+    color: var(--cyan) !important;
+}
+
+.text-purple-200,
+.text-purple-300,
+.text-purple-400,
+.text-purple-500,
+.dark .dark\:text-purple-200,
+.dark .dark\:text-purple-300,
+.dark .dark\:text-purple-400,
+.dark .dark\:text-purple-500 {
+    color: var(--purple) !important;
+}
+
+.text-pink-300,
+.text-pink-400,
+.text-pink-500,
+.dark .dark\:text-pink-300,
+.dark .dark\:text-pink-400,
+.dark .dark\:text-pink-500 {
+    color: var(--pink) !important;
+}
+
+.text-audienceScore-300 {
+    color: var(--red) !important;
+}
+
+.text-audienceScore-500 {
+    color: var(--amber) !important;
+}
+
+.text-audienceScore-600 {
+    color: var(--lime) !important;
+}
+
+.text-audienceScore-700 {
+    color: var(--emerald) !important;
+}
+
+/* Surface text that was white only because the old surface was dark. */
+.bg-gray-800.text-white,
+.bg-gray-900.text-white,
+.bg-gray-950.text-white,
+[class*="bg-gray-800/"].text-white,
+[class*="bg-gray-900/"].text-white,
+[class*="bg-gray-950/"].text-white,
+.bg-gray-800 .text-white,
+.bg-gray-900 .text-white,
+.bg-gray-950 .text-white,
+[class*="bg-gray-800/"] .text-white,
+[class*="bg-gray-900/"] .text-white,
+[class*="bg-gray-950/"] .text-white,
+.dark .dark\:text-white,
+.dark .dark\:hover\:text-white:hover,
+.dark .dark\:data-\[current\=true\]\:text-white[data-current="true"],
+.dark .dark\:data-\[state\=active\]\:text-white[data-state="active"] {
+    color: var(--foreground) !important;
+}
+
+.text-gray-100,
+.text-gray-200,
+.text-gray-300,
+.dark .dark\:text-gray-100,
+.dark .dark\:text-gray-200,
+.dark .dark\:text-gray-300 {
+    color: var(--foreground) !important;
+}
+
+.text-gray-400,
+.text-gray-500,
+.dark .dark\:text-gray-400,
+.dark .dark\:text-gray-500 {
+    color: var(--muted) !important;
+}
+
+/* Component surfaces and shared utility classes from the light-theme commit. */
+.UI-Button_root:is(.bg-orange-500),
+.bg-orange-500.text-white {
+    background-color: #c2410c !important;
+    color: #ffffff !important;
+}
+
+.UI-Button_root:is(.bg-green-500),
+.bg-green-500.text-white {
+    background-color: #154f37 !important;
+    color: #ffffff !important;
+}
+
+.UI-Button_root:is(.bg-red-500),
+.bg-red-500.text-white {
+    background-color: #b91c1c !important;
+    color: #ffffff !important;
+}
+
+.bg-blue-500.text-white,
+.UI-Badge__root.bg-blue-500 {
+    background-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.UI-Button_root.bg-brand-500,
+.bg-brand-500.text-white {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(82 67 203) !important;
+    color: #ffffff !important;
+}
+
+.bg-indigo-500.text-white,
+.UI-Badge__root.bg-indigo-500 {
+    background-color: #4338ca !important;
+    color: #ffffff !important;
+}
+
+.UI-Button_root:is(.text-gray-600, .text-gray-300, .text-gray-200, .text-\[--gray\]) {
+    color: var(--muted) !important;
+}
+
+.UI-Button_root:is(.bg-gray-100, .bg-white).bg-opacity-15,
+.UI-Button_root:is(.bg-gray-100, .bg-gray-200),
+.UI-Button_root:is(.text-white.bg-transparent),
+.UI-Button_root:is(.text-white.border-transparent.bg-transparent) {
+    background-color: var(--subtle) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Button_root:is(.bg-gray-100, .bg-white):hover,
+.UI-Button_root:is(.hover\:bg-gray-100):hover,
+.UI-Button_root:is(.hover\:bg-gray-200):hover,
+.UI-Button_root:is(.hover\:bg-white):hover {
+    background-color: var(--subtle-highlight) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Button_root:is(.bg-transparent):not(.border-\[--brand\]):not(.border-\[--red\]):not(.border-\[--orange\]):not(.border-\[--green\]) {
+    color: var(--muted) !important;
+}
+
+.UI-Button_root:is(.hover\:underline):hover {
+    color: var(--foreground) !important;
+}
+
+[data-top-menu] [data-current="true"],
+[data-top-menu] [data-current="true"] span,
+.UI-NavigationMenu__item[data-current="true"],
+.UI-Tabs__trigger[data-state="active"],
+[role="tab"][data-state="active"],
+.UI-StaticTabs__trigger[data-current="true"],
+.UI-StaticTabs__trigger[data-current="true"] * {
+    color: var(--foreground) !important;
+}
+
+.UI-StaticTabs__trigger[data-current="true"] {
+    background-color: var(--subtle) !important;
+}
+
+/* Media entry headers sit over artwork. In dark mode Seanime uses white text and
+   transparent metadata badges; keep that structure, but use the light foreground. */
+[data-media-page-header-entry-details],
+[data-media-page-header-entry-details] :is(
+    [data-media-page-header-entry-details-title-container],
+    [data-media-page-header-entry-details-title-container] *,
+    [data-media-page-header-entry-details-more-info],
+    [data-media-page-header-entry-details-status],
+    [data-media-page-header-entry-details-date-container],
+    [data-media-page-header-entry-details-date-container] p,
+    [data-media-page-header-progress-badge],
+    [data-media-page-header-progress-badge] *
+) {
+    color: var(--foreground) !important;
+    text-shadow: none !important;
+}
+
+[data-media-page-header-entry-details] :is(
+    [data-media-entry-genres-list-item],
+    [data-anime-entry-studio-badge],
+    [data-media-page-header-entry-details-date-badge],
+    [data-anime-entry-rankings] .UI-Badge__root
+) {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+[data-media-page-header-entry-details] :is(
+    [data-media-entry-genres-list-item],
+    [data-anime-entry-studio-badge],
+    [data-anime-entry-rankings] .UI-Badge__root
+) {
+    color: var(--muted) !important;
+}
+
+[data-media-page-header-entry-details] :is(
+    [data-media-entry-genres-list-item],
+    [data-anime-entry-studio-badge],
+    [data-anime-entry-rankings] .UI-Badge__root
+):hover {
+    color: var(--foreground) !important;
+}
+
+[data-media-page-header-entry-details-date-badge] {
+    color: var(--foreground) !important;
+}
+
+[data-media-page-header-entry-details-date-badge] svg,
+[data-media-page-header-entry-details-date-badge] [class*="icon"] {
+    color: var(--muted) !important;
+}
+
+.UI-Badge__root {
+    border-color: var(--border) !important;
+}
+
+.UI-Badge__root.text-gray-800,
+.UI-Badge__root.text-gray-900,
+.UI-Badge__root.text-white,
+.UI-Badge__root.bg-gray-100,
+.UI-Badge__root.bg-gray-800,
+.UI-Badge__root.bg-gray-900 {
+    background-color: var(--subtle) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Badge__root.bg-white {
+    background-color: var(--paper-elevated) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Badge__root.bg-indigo-50 {
+    color: var(--indigo) !important;
+}
+
+.UI-Badge__root.bg-green-50 {
+    color: var(--green) !important;
+}
+
+.UI-Badge__root.bg-orange-50 {
+    color: var(--orange) !important;
+}
+
+.UI-Badge__root.bg-red-50 {
+    color: var(--red) !important;
+}
+
+.UI-Badge__root.bg-blue-50 {
+    color: var(--blue) !important;
+}
+
+.UI-Alert__root {
+    color: var(--foreground) !important;
+}
+
+.UI-Alert__root.bg-blue-50,
+.UI-Alert__root.bg-blue-500\/10,
+.UI-Alert__root.bg-\[rgba\(29\,78\,216\,0\.08\)\] {
+    background-color: rgba(29, 78, 216, 0.08) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Alert__root.bg-green-50,
+.UI-Alert__root.bg-green-500\/10 {
+    background-color: rgba(21, 79, 55, 0.08) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Alert__root.bg-orange-50,
+.UI-Alert__root.bg-orange-500\/10 {
+    background-color: rgba(194, 65, 12, 0.09) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Alert__root.bg-red-50,
+.UI-Alert__root.bg-red-500\/10 {
+    background-color: rgba(185, 28, 28, 0.08) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Alert__root :is(.UI-Alert__title, .UI-Alert__description, .UI-Alert__description *) {
+    color: var(--foreground) !important;
+}
+
+.UI-Alert__root.bg-blue-50 .UI-Alert__icon,
+.UI-Alert__root.bg-blue-500\/10 .UI-Alert__icon {
+    color: var(--blue) !important;
+}
+
+.UI-Alert__root.bg-green-50 .UI-Alert__icon,
+.UI-Alert__root.bg-green-500\/10 .UI-Alert__icon {
+    color: var(--green) !important;
+}
+
+.UI-Alert__root.bg-orange-50 .UI-Alert__icon,
+.UI-Alert__root.bg-orange-500\/10 .UI-Alert__icon {
+    color: var(--orange) !important;
+}
+
+.UI-Alert__root.bg-red-50 .UI-Alert__icon,
+.UI-Alert__root.bg-red-500\/10 .UI-Alert__icon {
+    color: var(--red) !important;
+}
+
+.UI-Alert__root.bg-white,
+.UI-Alert__root.bg-gray-800 {
+    background-color: var(--paper) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Input__root {
+    background-color: var(--paper) !important;
+    border-color: var(--border) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Input__root.bg-gray-100,
+.UI-Input__root.bg-gray-50,
+.UI-Input__root.bg-gray-800,
+.UI-Input__root:disabled,
+.UI-Input__root[disabled] {
+    background-color: var(--subtle) !important;
+}
+
+.UI-Input__root:hover {
+    background-color: var(--subtle-highlight) !important;
+}
+
+.UI-Input__root:focus,
+.UI-Input__root:focus-visible {
+    background-color: var(--paper) !important;
+    border-color: rgb(150 150 158) !important;
+}
+
+.UI-Input__addons--addon,
+.UI-Combobox__selectedItem,
+.UI-Tooltip__content,
+.UI-PageHeader__title,
+.UI-Table__head,
+.UI-NavigationMenu__trigger[data-current="true"] {
+    background-color: var(--paper-elevated) !important;
+    color: var(--foreground) !important;
+    border-color: var(--border) !important;
+}
+
+.UI-Tooltip__content {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.code,
+pre,
+.cm-editor,
+.cm-gutters {
+    background-color: rgb(238 238 241) !important;
+    color: var(--foreground) !important;
+}
+
+.cm-gutterElement,
+.cm-activeLineGutter {
+    color: var(--muted) !important;
+}
+
+.cm-activeLine,
+.cm-activeLineGutter {
+    background-color: rgb(224 224 228) !important;
+}
+
+/* App-specific panels and cards that used dark-only gray surfaces. */
+.bg-gray-950,
+.bg-gray-900,
+.bg-gray-800,
+[class*="bg-gray-950/"],
+[class*="bg-gray-900/"],
+[class*="bg-gray-800/"] {
+    color: var(--foreground);
+}
+
+.bg-gray-950,
+[class*="bg-gray-950/"] {
+    background-color: rgb(248 248 250 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-gray-900,
+[class*="bg-gray-900/"] {
+    background-color: rgb(238 238 241 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-gray-800,
+[class*="bg-gray-800/"] {
+    background-color: rgb(224 224 228 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-gray-700,
+[class*="bg-gray-700/"] {
+    background-color: rgb(200 200 206 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.border-gray-800,
+.border-gray-700,
+.border-gray-600,
+.dark .dark\:border-gray-800,
+.dark .dark\:border-gray-700,
+.dark .dark\:border-gray-600 {
+    border-color: var(--border) !important;
+}
+
+.hover\:border-gray-700:hover,
+.hover\:border-gray-600:hover,
+.dark .dark\:hover\:border-gray-600:hover {
+    border-color: rgba(0, 0, 0, 0.18) !important;
+}
+
+.hover\:bg-gray-900:hover,
+.hover\:bg-gray-800:hover,
+.hover\:bg-gray-700:hover,
+.dark .dark\:hover\:bg-gray-900:hover,
+.dark .dark\:hover\:bg-gray-800:hover,
+.dark .dark\:hover\:bg-gray-700:hover {
+    background-color: var(--subtle-highlight) !important;
+}
+
+.data-\[state\=active\]\:bg-\[--subtle\][data-state="active"],
+.data-\[current\=true\]\:bg-\[--subtle\][data-current="true"],
+.data-\[checked\=true\]\:bg-white[data-checked="true"],
+.data-\[state\=checked\]\:bg-white[data-state="checked"] {
+    background-color: var(--paper) !important;
+    color: var(--foreground) !important;
+}
+
+.ring-brand-100,
+.ring-brand-500,
+.data-\[current\=true\]\:ring-brand-500[data-current="true"],
+.data-\[checked\=true\]\:border-\[--brand\][data-checked="true"] {
+    --tw-ring-color: rgb(97 82 223) !important;
+    border-color: var(--brand) !important;
+}
+
+/* Keep intentionally dark media/player/readback surfaces dark. */
+media-controller,
+.native-player-gradient-bottom,
+.rr-player,
+.rr-player .rr-controller,
+.manga-reader-action-display,
+[data-native-player-container],
+.bg-black,
+[class*="bg-black/"] {
+    color: #ffffff;
+}
+
+media-controller,
+media-settings-menu,
+media-audio-track-menu,
+media-captions-menu {
+    --media-menu-background: rgba(21, 21, 21, 0.9) !important;
+    --media-range-track-background: rgba(255, 255, 255, 0.2) !important;
+    --media-time-range-buffered-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Calendar cells: the app remains in dark mode, so dark:hover:text-white would
+   otherwise create white text on light cells. */
+[data-schedule-calendar] [data-schedule-calendar-day-date],
+[data-schedule-calendar] [data-schedule-calendar-day-date]:hover,
+[data-schedule-calendar] [data-schedule-calendar-day-item]:hover [data-schedule-calendar-day-date] {
+    color: var(--foreground) !important;
+}
+
+[data-schedule-calendar] [data-schedule-calendar-day-date].bg-\[--foreground\],
+[data-schedule-calendar] [data-schedule-calendar-day-date][class*="bg-[--foreground]"] {
+    background-color: var(--foreground) !important;
+    color: var(--background) !important;
+}
+
+[data-schedule-calendar] :is(
+    [data-schedule-calendar-event-item-text],
+    [data-schedule-calendar-event-item-text] *,
+    [data-schedule-calendar-event-item-episode-time],
+    [data-schedule-calendar-event-list-item-more-text],
+    [data-schedule-calendar-day-hovered-event-text],
+    [data-schedule-calendar-day-hovered-event-text] *
+):hover,
+[data-schedule-calendar] .group:hover :is(
+    [data-schedule-calendar-event-item-text],
+    [data-schedule-calendar-event-item-text] *,
+    [data-schedule-calendar-event-item-episode-time],
+    [data-schedule-calendar-event-list-item-more-text],
+    [data-schedule-calendar-day-hovered-event-text],
+    [data-schedule-calendar-day-hovered-event-text] *
+) {
+    color: var(--foreground) !important;
+}
+
+/* Settings dirty-state bar: it is still rendered as an info alert in dark mode. */
+.UI-Alert__root.fixed[class*="bg-[--background]"] {
+    background-color: var(--paper) !important;
+    color: var(--foreground) !important;
+    border-color: var(--border) !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14) !important;
+}
+
+.UI-Alert__root.fixed[class*="bg-[--background]"] :is(
+    .UI-Alert__description,
+    .UI-Alert__description *,
+    .UI-Button__root,
+    .UI-Button__root *
+) {
+    color: var(--foreground) !important;
+    opacity: 1 !important;
+}
+
+/* Torrent search rows: cancel the dark-only subtitle fade and keep metadata readable. */
+[data-torrent-preview-item] {
+    background-color: var(--paper) !important;
+    border-color: var(--border) !important;
+    color: var(--foreground) !important;
+}
+
+[data-torrent-preview-item]:hover {
+    border-color: rgba(0, 0, 0, 0.22) !important;
+    background-color: rgb(250 250 251) !important;
+}
+
+[data-torrent-preview-item] :is(
+    [data-torrent-preview-item-subtitle],
+    [data-torrent-preview-item-release-group],
+    [data-torrent-preview-item-metadata] p,
+    [data-torrent-preview-item-subcontent],
+    [data-torrent-preview-item-subcontent] *,
+    [data-torrent-item-seeders-badge],
+    [data-torrent-item-seeders-badge] span
+) {
+    color: var(--muted) !important;
+    opacity: 1 !important;
+}
+
+[data-torrent-preview-item] :is(
+    [data-torrent-preview-item-title],
+    [data-torrent-preview-item-title] *,
+    [data-torrent-preview-item-release-group] span
+) {
+    color: var(--foreground) !important;
+    opacity: 1 !important;
+}
+
+[data-torrent-preview-item] [data-torrent-preview-item-image] {
+    filter: saturate(1.05) contrast(1.03) !important;
+}
+
+/* Entry metadata score chips should stay frameless when the caller asks for transparency. */
+[data-media-page-header-entry-details] [data-media-entry-audience-score],
+[data-media-page-header-entry-details] [data-media-entry-audience-score] *,
+[data-media-entry-audience-score].bg-transparent,
+[data-media-entry-audience-score].bg-transparent *,
+[data-media-entry-audience-score].border-transparent,
+[data-media-entry-audience-score].border-transparent * {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+[data-media-page-header-entry-details] [data-media-entry-audience-score],
+[data-media-page-header-entry-details] [data-media-entry-audience-score] * {
+    padding-inline: 0 !important;
+}
+
+/* Radix dropdown/context menus are portaled, so their surface must be overridden globally. */
+.UI-ContextMenu__root,
+.UI-ContextMenu__subContent,
+.UI-DropdownMenu__root,
+.UI-DropdownMenu__subContent {
+    background-color: var(--paper) !important;
+    color: var(--foreground) !important;
+    border-color: var(--border) !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.16) !important;
+}
+
+.UI-ContextMenu__item,
+.UI-ContextMenu__subTrigger,
+.UI-DropdownMenu__item,
+.UI-DropdownMenu__subTrigger {
+    color: var(--foreground) !important;
+    opacity: 1 !important;
+}
+
+.UI-ContextMenu__item[data-disabled],
+.UI-ContextMenu__subTrigger[data-disabled],
+.UI-DropdownMenu__item[data-disabled],
+.UI-DropdownMenu__subTrigger[data-disabled] {
+    color: rgba(39, 39, 42, 0.58) !important;
+    opacity: 1 !important;
+}
+
+.UI-ContextMenu__item:focus,
+.UI-ContextMenu__subTrigger:focus,
+.UI-ContextMenu__subTrigger[data-state="open"],
+.UI-DropdownMenu__item:focus,
+.UI-DropdownMenu__subTrigger:focus,
+.UI-DropdownMenu__subTrigger[data-state="open"] {
+    background-color: var(--subtle-highlight) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-ContextMenu__label,
+.UI-DropdownMenu__label,
+.UI-ContextMenu__shortcut,
+.UI-DropdownMenu__shortcut {
+    color: var(--muted) !important;
+    opacity: 1 !important;
+}
+
+.UI-ContextMenu__separator,
+.UI-DropdownMenu__separator {
+    background-color: var(--border) !important;
+}
+
+/* Modal surfaces are light now; headings inside them must not inherit dark-mode white text. */
+.UI-Modal__content {
+    background-color: var(--paper) !important;
+    color: var(--foreground) !important;
+    border-color: var(--border) !important;
+}
+
+.UI-Modal__content :is(
+    .UI-Modal__title,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p:not(.text-\[--muted\]),
+    label
+) {
+    color: var(--foreground) !important;
+}
+
+.UI-Modal__content :is(
+    .UI-Modal__description,
+    .text-\[--muted\],
+    [class*="text-gray-400"],
+    [class*="text-gray-500"]
+) {
+    color: var(--muted) !important;
+}
+
+.UI-Modal__content .UI-Modal__close {
+    color: var(--muted) !important;
+}
+
+.UI-Modal__content .UI-Modal__close:hover {
+    color: var(--foreground) !important;
+}
+
+/* Date picker popovers use the shared Popover + DayPicker calendar, not the schedule calendar. */
+.UI-Popover__root {
+    background-color: var(--paper) !important;
+    color: var(--foreground) !important;
+    border-color: var(--border) !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.16) !important;
+}
+
+.UI-Popover__root :is(
+    .UI-Calendar__root,
+    .UI-Calendar__month,
+    .UI-Calendar__monthGrid,
+    .UI-Calendar__monthCaption,
+    .UI-Calendar__captionLabel,
+    .UI-Calendar__week,
+    .UI-Calendar__day,
+    .UI-Calendar__dayButton
+) {
+    background-color: transparent !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Popover__root :is(
+    .UI-Calendar__weekday,
+    .UI-Calendar__outside,
+    .UI-Calendar__disabled,
+    .UI-DatePicker__placeholder
+) {
+    color: var(--muted) !important;
+    opacity: 1 !important;
+}
+
+.UI-Popover__root .UI-Calendar__outside,
+.UI-Popover__root .UI-Calendar__disabled {
+    color: rgba(39, 39, 42, 0.45) !important;
+}
+
+.UI-Popover__root .UI-Calendar__today:not(.UI-Calendar__selected) {
+    background-color: var(--subtle-highlight) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Popover__root .UI-Calendar__selected,
+.UI-Popover__root .UI-Calendar__selected .UI-Calendar__dayButton,
+.UI-Popover__root .UI-Calendar__selected:hover,
+.UI-Popover__root .UI-Calendar__selected:hover .UI-Calendar__dayButton,
+.UI-Popover__root .UI-Calendar__selected:focus,
+.UI-Popover__root .UI-Calendar__selected:focus .UI-Calendar__dayButton {
+    background-color: var(--brand) !important;
+    color: #ffffff !important;
+}
+
+.UI-Popover__root .UI-Calendar__day:not(.UI-Calendar__selected):hover,
+.UI-Popover__root .UI-Calendar__dayButton:not([disabled]):hover,
+.UI-Popover__root .UI-Calendar__dayButton:not([disabled]):focus-visible {
+    background-color: var(--subtle-highlight) !important;
+    color: var(--foreground) !important;
+}
+
+.UI-Popover__root .UI-Calendar__chevron {
+    background-color: transparent !important;
+    color: var(--foreground) !important;
+    border-color: transparent !important;
+}
+
+.UI-Popover__root .UI-Calendar__chevron:hover {
+    background-color: var(--subtle-highlight) !important;
+}
+
+.UI-Popover__root [class*="border-b"],
+.UI-Popover__root [class*="border-t"] {
+    border-color: var(--border) !important;
+}
+
+.UI-Popover__root button {
+    color: inherit;
+}
+
+.UI-Popover__root button.text-\[--muted\] {
+    color: var(--muted) !important;
+}
+
+.UI-Popover__root button.text-\[--muted\]:hover {
+    color: var(--foreground) !important;
+}
+
+/* Disabled comboboxes still display selected values; keep those values readable. */
+.UI-Combobox__root:disabled,
+.UI-Combobox__root[disabled],
+.UI-Combobox__root[data-disabled="true"] {
+    opacity: 1 !important;
+    background-color: var(--paper-elevated) !important;
+    color: var(--foreground) !important;
+    border-color: var(--border) !important;
+}
+
+.UI-Combobox__root:disabled :is(
+    .UI-Combobox__inputValuesContainer,
+    .UI-Combobox__inputValuesContainer *,
+    .UI-Combobox__chevronIcon,
+    .UI-Badge__removeItemButton
+),
+.UI-Combobox__root[disabled] :is(
+    .UI-Combobox__inputValuesContainer,
+    .UI-Combobox__inputValuesContainer *,
+    .UI-Combobox__chevronIcon,
+    .UI-Badge__removeItemButton
+),
+.UI-Combobox__root[data-disabled="true"] :is(
+    .UI-Combobox__inputValuesContainer,
+    .UI-Combobox__inputValuesContainer *,
+    .UI-Combobox__chevronIcon,
+    .UI-Badge__removeItemButton
+) {
+    opacity: 1 !important;
+}
+
+.UI-Combobox__root:disabled .UI-Combobox__inputValuesContainer p:not(.text-\[--muted\]),
+.UI-Combobox__root[disabled] .UI-Combobox__inputValuesContainer p:not(.text-\[--muted\]),
+.UI-Combobox__root[data-disabled="true"] .UI-Combobox__inputValuesContainer p:not(.text-\[--muted\]) {
+    color: var(--foreground) !important;
+}
+
+.UI-Combobox__root:disabled .UI-Combobox__inputValuesContainer .text-\[--muted\],
+.UI-Combobox__root[disabled] .UI-Combobox__inputValuesContainer .text-\[--muted\],
+.UI-Combobox__root[data-disabled="true"] .UI-Combobox__inputValuesContainer .text-\[--muted\] {
+    color: var(--muted) !important;
+}
+
+/* Torrent download/search drawer: preserve the original see-through overlay feel in light mode. */
+[data-vaul-overlay] {
+    background-color: rgba(15, 23, 42, 0.28) !important;
+    backdrop-filter: blur(10px) saturate(1.02) !important;
+}
+
+[data-vaul-drawer]:has([data-torrent-search-drawer-content]) {
+    background-color: rgba(255, 255, 255, 0.82) !important;
+    color: var(--foreground) !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 -18px 60px rgba(15, 23, 42, 0.18) !important;
+    backdrop-filter: blur(18px) saturate(1.08) !important;
+}
+
+[data-vaul-drawer]:has([data-torrent-search-drawer-content]) [data-torrent-search-drawer-content] {
+    color: var(--foreground) !important;
+}
+
+[data-vaul-drawer]:has([data-torrent-search-drawer-content]) [data-torrent-search-drawer-content] :is(
+    [data-torrent-preview-item],
+    [data-torrent-search-smart-search-provider-param-container],
+    [data-torrent-search-container-torrents-container] > *,
+    [data-torrent-preview-list] > *
+) {
+    background-color: rgba(255, 255, 255, 0.72) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Episode thumbnails: light-mode gray remapping must not turn media overlays white. */
+[data-episode-grid-item] [data-episode-grid-item-image],
+[data-episode-card] [data-episode-card-image] {
+    filter: saturate(1.06) contrast(1.04) !important;
+}
+
+[data-episode-grid-item][data-is-watched="true"] [data-episode-grid-item-image],
+[data-episode-card][data-is-watched="true"] [data-episode-card-image] {
+    opacity: 0.72 !important;
+}
+
+[data-episode-grid-item]:hover [data-episode-grid-item-image],
+[data-episode-card]:hover [data-episode-card-image] {
+    opacity: 1 !important;
+}
+
+[data-episode-grid-item-action-overlay],
+[data-episode-card-action-icon] {
+    background-color: rgba(0, 0, 0, 0.58) !important;
+    color: #ffffff !important;
+}
+
+[data-episode-grid-item-action-overlay] *,
+[data-episode-card-action-icon] * {
+    color: #ffffff !important;
+}
