@@ -1003,6 +1003,30 @@ media-captions-menu {
     border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Page header banners (home/discover hero + media entry header): the light-mode
+   --background makes Seanime's from-[--background] overlay gradients fade the
+   artwork toward near-white, so banners read washed out. Restore clarity with a
+   contrast/saturation lift. */
+[data-discover-page-header-banner-image] img,
+[data-media-page-header-banner-image] {
+    filter: saturate(1.3) contrast(1.2) brightness(0.86) !important;
+}
+
+/* Discover hero title is white with a faint dark shadow (a dark-mode holdover).
+   On light/bright banners that fails the contrast test, so bring it in line with
+   the rest of the light theme: dark text over the (strengthened) left scrim, the
+   same dark-text-on-light-scrim treatment the media entry header already uses. */
+[data-discover-page-header] .text-white {
+    color: var(--foreground) !important;
+    text-shadow: none !important;
+}
+
+/* Strengthen the discover hero's left-to-right scrim gradients so the dark text
+   column stays legible regardless of how bright the banner behind it is. */
+[data-discover-page-header-banner-image] [class*="bg-gradient-to-r"] {
+    opacity: 0.9 !important;
+}
+
 /* Episode thumbnails: light-mode gray remapping must not turn media overlays white. */
 [data-episode-grid-item] [data-episode-grid-item-image],
 [data-episode-card] [data-episode-card-image] {
