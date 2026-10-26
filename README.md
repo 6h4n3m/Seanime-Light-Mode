@@ -1,6 +1,6 @@
 # Seanime Light Mode
 
-A custom CSS override that brings a full light theme to [Seanime Denshi](https://github.com/5h4n3m/Seanime) (Web UI). It remaps all of Seanime's dark-mode-only color tokens, surfaces, and component styles to clean light equivalents without touching the underlying app code.
+A custom CSS override that brings a full light theme to [Seanime Denshi]([https://github.com/5h4n3m/Seanime](https://github.com/5rahim/seanime)) (Web UI). It remaps all of Seanime's dark-mode-only color tokens, surfaces, and component styles to clean light equivalents without touching the underlying app code.
 
 ## Features
 
